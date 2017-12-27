@@ -1253,7 +1253,7 @@ let parseCSV = function(_file, template,mapping) {
         let uploadedRecords = 0;
         let progress = 0;
         let read_write = 0;
-        let uploaderBatchSize = 100;
+        let uploaderBatchSize = 50;
 
         Papa.parse(_file, {
             header: true,
