@@ -1,0 +1,1532 @@
+/* CSS declarations go here */
+
+#upload-csv-zone>.file-zone {
+    border: 2px dashed #494e6b;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+#upload-csv-zone>.file-zone>input[type="file"] {
+    width: 100%;
+    height: 200px;
+    opacity: 0;
+}
+
+#upload-csv-zone .dz-spinner {
+    display: none;
+}
+
+#upload-csv-zone.onprogress .dz-spinner {
+    position: absolute;
+    font-weight: 500;
+    font-size: 25px;
+    top: 23%;
+    text-align: center;
+    width: 100%;
+    color: #98878f;
+    display: block;
+}
+
+#upload-csv-zone .dz-message {
+    position: absolute;
+    font-weight: 500;
+    font-size: 25px;
+    top: 35%;
+    text-align: center;
+    width: 100%;
+    color: #98878f;
+    display: block;
+}
+
+#upload-csv-zone .dz-message>small {
+    font-size: 60%;
+    color: #bbb;
+}
+
+#upload-csv-zone.onprogress .dz-message {
+    display: none;
+}
+
+.progress {
+    margin-bottom: 0px;
+}
+
+.fileprogress {
+    margin-top: 15px;
+}
+
+.container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#preview table td>div,
+#preview table th {
+    white-space: nowrap;
+}
+
+#preview table td>div {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.preview table td>div,
+.preview table td,
+.preview table th {
+    white-space: nowrap;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/*************  progress buttons *************/
+
+
+/*https://tympanus.net/Development/ProgressButtonStyles/*/
+
+
+/*@font-face {
+font-weight: normal;
+font-style: normal;
+font-family: 'icomoon';
+src: url('../fonts/icomoon/icomoon.eot');
+src: url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'), url('../fonts/icomoon/icomoon.ttf') format('truetype'), url('../fonts/icomoon/icomoon.woff') format('woff'), url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+}*/
+
+
+/* General styles for all types of buttons */
+
+.progress-button {
+    position: relative;
+    display: inline-block;
+    padding: 0 25px;
+    outline: none;
+    border: none;
+    background: #1fb58f;
+    color: #fff;
+    /*text-transform: uppercase;*/
+    letter-spacing: 1px;
+    font-size: 1em;
+    line-height: 3;
+}
+
+.progress-button[disabled],
+.progress-button[disabled].state-loading {
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+}
+
+.progress-button .content {
+    position: relative;
+    display: block;
+}
+
+.progress-button .content::before,
+.progress-button .content::after {
+    position: absolute;
+    right: 20px;
+    color: #0e7138;
+    font-family: "icomoon";
+    opacity: 0;
+    -webkit-transition: opacity 0.3s 0.3s;
+    transition: opacity 0.3s 0.3s;
+}
+
+.progress-button .content::before {
+    content: "\e600";
+    /* Checkmark for success */
+}
+
+.progress-button .content::after {
+    content: "\e601";
+    /* Cross for error */
+}
+
+.progress-button.state-success .content::before,
+.progress-button.state-error .content::after {
+    opacity: 1;
+}
+
+.notransition {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+.progress-button .progress {
+    background: #148544;
+}
+
+.progress-button .progress-inner {
+    position: absolute;
+    left: 0;
+    background: #0e7138;
+}
+
+.progress-button[data-horizontal] .progress-inner {
+    top: 0;
+    width: 0;
+    height: 100%;
+    -webkit-transition: width 0.3s, opacity 0.3s;
+    transition: width 0.3s, opacity 0.3s;
+}
+
+.progress-button[data-vertical] .progress-inner {
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    -webkit-transition: height 0.3s, opacity 0.3s;
+    transition: height 0.3s, opacity 0.3s;
+}
+
+
+/* Necessary 3d styles for buttons with perspective */
+
+.progress-button[data-perspective] {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    background: transparent;
+    -webkit-perspective: 900px;
+    perspective: 900px;
+}
+
+.progress-button[data-perspective] .content {
+    padding: 0 60px;
+    background: #1fb58f;
+}
+
+.progress-button[data-perspective] .progress-wrap {
+    display: block;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.progress-button[data-perspective] .content,
+.progress-button[data-perspective] .progress {
+    outline: 1px solid rgba(0, 0, 0, 0);
+    /* Smoothen jagged edges in FF */
+}
+
+
+/* Individual styles */
+
+
+/* Choose the effect(s) you want, delete the rest */
+
+
+/* Fill horizontal */
+
+
+/* ====================== */
+
+.progress-button[data-style="fill"][data-horizontal] {
+    overflow: hidden;
+}
+
+.progress-button[data-style="fill"][data-horizontal] .content {
+    z-index: 10;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.progress-button[data-style="fill"][data-horizontal] .content::before,
+.progress-button[data-style="fill"][data-horizontal] .content::after {
+    top: 100%;
+    right: auto;
+    left: 50%;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.progress-button[data-style="fill"][data-horizontal].state-success .content,
+.progress-button[data-style="fill"][data-horizontal].state-error .content {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+
+/* Fill vertical */
+
+
+/* ====================== */
+
+.progress-button[data-style="fill"][data-vertical] {
+    overflow: hidden;
+}
+
+.progress-button[data-style="fill"][data-vertical] .content {
+    z-index: 10;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.progress-button[data-style="fill"][data-vertical] .content::before,
+.progress-button[data-style="fill"][data-vertical] .content::after {
+    top: 100%;
+    right: auto;
+    left: 50%;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.progress-button[data-style="fill"][data-vertical].state-success .content,
+.progress-button[data-style="fill"][data-vertical].state-error .content {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+
+/* Shrink horizontal */
+
+
+/* ====================== */
+
+.progress-button[data-style="shrink"] {
+    /* common for horizontal and vertical */
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+.progress-button[data-style="shrink"][data-horizontal] .content {
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.progress-button[data-style="shrink"][data-horizontal] .content::before,
+.progress-button[data-style="shrink"][data-horizontal] .content::after {
+    top: 100%;
+    right: auto;
+    left: 50%;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.progress-button[data-style="shrink"][data-horizontal].state-loading {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3);
+}
+
+.progress-button[data-style="shrink"][data-horizontal].state-loading .content {
+    opacity: 0;
+}
+
+.progress-button[data-style="shrink"][data-horizontal].state-success .content,
+.progress-button[data-style="shrink"][data-horizontal].state-error .content {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+
+/* Shrink vertical */
+
+
+/* ====================== */
+
+.progress-button[data-style="shrink"][data-vertical] .content {
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.progress-button[data-style="shrink"][data-vertical] .content::before,
+.progress-button[data-style="shrink"][data-vertical] .content::after {
+    top: 100%;
+    right: auto;
+    left: 50%;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.progress-button[data-style="shrink"][data-vertical].state-loading {
+    -webkit-transform: scaleX(0.1);
+    transform: scaleX(0.1);
+}
+
+.progress-button[data-style="shrink"][data-vertical].state-loading .content {
+    opacity: 0;
+}
+
+.progress-button[data-style="shrink"][data-vertical].state-success .content,
+.progress-button[data-style="shrink"][data-vertical].state-error .content {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+
+/* Rotate bottom 3d */
+
+
+/* ====================== */
+
+.progress-button[data-style="rotate-angle-bottom"] .progress {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    box-shadow: 0 -1px 0 #148544;
+    /* fix the blurriness that causes a gap */
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+}
+
+.progress-button[data-style="rotate-angle-bottom"].state-loading .progress-wrap {
+    -webkit-transform: rotateX(45deg);
+    transform: rotateX(45deg);
+}
+
+
+/* Rotate top 3d */
+
+
+/* ====================== */
+
+.progress-button[data-style="rotate-angle-top"] .progress {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    box-shadow: 0 1px 0 #148544;
+    /* fix the blurriness that causes a gap */
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+
+.progress-button[data-style="rotate-angle-top"].state-loading .progress-wrap {
+    -webkit-transform: rotateX(-45deg);
+    transform: rotateX(-45deg);
+}
+
+
+/* Rotate left 3d */
+
+
+/* ====================== */
+
+.progress-button[data-style="rotate-angle-left"] .progress {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 20px;
+    height: 100%;
+    box-shadow: 1px 0 0 #148544;
+    /* fix the blurriness that causes a gap */
+    -webkit-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+}
+
+.progress-button[data-style="rotate-angle-left"].state-loading .progress-wrap {
+    -webkit-transform: rotateY(45deg);
+    transform: rotateY(45deg);
+}
+
+
+/* Rotate right 3d */
+
+
+/* ====================== */
+
+.progress-button[data-style="rotate-angle-right"] .progress {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 20px;
+    height: 100%;
+    box-shadow: -1px 0 0 #148544;
+    /* fix the blurriness that causes a gap */
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+}
+
+.progress-button[data-style="rotate-angle-right"].state-loading .progress-wrap {
+    -webkit-transform: rotateY(-45deg);
+    transform: rotateY(-45deg);
+}
+
+
+/* Rotate side down 3d */
+
+
+/* ====================== */
+
+.progress-button[data-style="rotate-side-down"] .progress {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.progress-button[data-style="rotate-side-down"].state-loading .progress-wrap {
+    -webkit-transform: rotateX(90deg) translateZ(10px);
+    transform: rotateX(90deg) translateZ(10px);
+}
+
+
+/* Rotate side up 3d */
+
+
+/* ====================== */
+
+.progress-button[data-style="rotate-side-up"] .progress {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.progress-button[data-style="rotate-side-up"].state-loading .progress-wrap {
+    -webkit-transform: rotateX(-90deg) translateZ(10px);
+    transform: rotateX(-90deg) translateZ(10px);
+}
+
+
+/* Rotate side left 3d */
+
+
+/* ====================== */
+
+.progress-button[data-style="rotate-side-left"] .progress-wrap {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+}
+
+.progress-button[data-style="rotate-side-left"] .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+}
+
+.progress-button[data-style="rotate-side-left"].state-loading .progress-wrap {
+    -webkit-transform: translateX(50%) rotateY(90deg) translateZ(10px);
+    transform: translateX(50%) rotateY(90deg) translateZ(10px);
+}
+
+
+/* Rotate side right 3d */
+
+
+/* ====================== */
+
+.progress-button[data-style="rotate-side-right"] .progress-wrap {
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+}
+
+.progress-button[data-style="rotate-side-right"] .progress {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 20px;
+    height: 100%;
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+}
+
+.progress-button[data-style="rotate-side-right"].state-loading .progress-wrap {
+    -webkit-transform: translateX(-50%) rotateY(-90deg) translateZ(10px);
+    transform: translateX(-50%) rotateY(-90deg) translateZ(10px);
+}
+
+
+/* Rotate back 3d */
+
+
+/* ====================== */
+
+.progress-button[data-style="rotate-back"] .progress-wrap {
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.progress-button[data-style="rotate-back"] .content {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.progress-button[data-style="rotate-back"] .progress {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.progress-button[data-style="rotate-back"].state-loading .progress-wrap {
+    -webkit-transform: rotateX(180deg) scaleX(0.6) scaleY(0.3);
+    transform: rotateX(180deg) scaleX(0.6) scaleY(0.3);
+}
+
+
+/* flip open 3d */
+
+
+/* ====================== */
+
+.progress-button[data-style="flip-open"] .content {
+    z-index: 10;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
+
+.progress-button[data-style="flip-open"] .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.progress-button[data-style="flip-open"].state-loading .content {
+    -webkit-transform: rotateX(45deg);
+    transform: rotateX(45deg);
+}
+
+
+/* slide down */
+
+
+/* ====================== */
+
+.progress-button[data-style="slide-down"] {
+    padding: 0;
+    overflow: visible;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.progress-button[data-style="slide-down"] .content {
+    z-index: 10;
+    padding: 0 60px;
+    background: #1fb58f;
+}
+
+.progress-button[data-style="slide-down"] .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+.progress-button[data-style="slide-down"].state-loading .progress {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+
+/* move-up */
+
+
+/* ====================== */
+
+.progress-button[data-style="move-up"] {
+    padding: 0;
+    overflow: visible;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.progress-button[data-style="move-up"] .content {
+    z-index: 10;
+    padding: 0 60px;
+    background: #1fb58f;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+.progress-button[data-style="move-up"] .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.progress-button[data-style="move-up"].state-loading .content {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+
+/* top-line */
+
+
+/* ====================== */
+
+.progress-button[data-style="top-line"] .progress-inner {
+    height: 5px;
+}
+
+.progress-button[data-style="top-line"] .content::before,
+.progress-button[data-style="top-line"] .content::after {
+    right: auto;
+    left: 100%;
+    margin-left: 25px;
+}
+
+
+/* lateral-lines */
+
+
+/* ====================== */
+
+.progress-button[data-style="lateral-lines"] .progress-inner {
+    width: 100%;
+    border-right: 3px solid #0e7138;
+    border-left: 3px solid #0e7138;
+    background: transparent;
+}
+
+.progress-button[data-style="lateral-lines"] .content::before,
+.progress-button[data-style="lateral-lines"] .content::after {
+    right: auto;
+    left: 100%;
+    margin-left: 25px;
+}
+
+.progress-button.inProgress {
+    pointer-events: none;
+}
+
+.progress-button.progress-button-small {
+    line-height: 2.3;
+}
+
+.progress-button-danger {
+    background: #a94442;
+}
+
+
+/*****************end progress button ***********************/
+
+
+/*****************  nav-tabs-vertical **********************/
+
+.product-file-upload-tab-block>ul.nav-tabs-vertical {
+    width: 225px;
+    position: absolute;
+}
+
+.product-file-upload-tab-block>.tab-content {
+    margin-left: 250px;
+    margin-right: 25px;
+}
+
+.nav-tabs-vertical>li {
+    float: none;
+}
+
+.nav-tabs-vertical>li>a {
+    border: 1px solid #ddd !important;
+    border-radius: 0px;
+    padding-left: 40px;
+    color: #494e6b;
+}
+
+.nav-tabs-vertical>li.done>a {
+    background: #1fb58f;
+    color: #fff;
+}
+
+.nav-tabs-vertical>li.active>a {
+    background: #494e6b;
+    color: #fff;
+}
+
+.nav-tabs-vertical>li.active>a:hover,
+.nav-tabs-vertical>li.active>a:focus,
+.nav-tabs-vertical>li.active>a:active,
+.nav-tabs-vertical>li.active>a:visited {
+    background: #494e6b;
+    color: #fff;
+}
+
+.nav-tabs-vertical>li.active>a::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -13px;
+    border-left: 0;
+    border-bottom: 13px solid transparent;
+    border-top: 13px solid transparent;
+    border-left: 10px solid #494e6b;
+}
+
+.nav-tabs-vertical>li>a>i.fa-check-circle-o {
+    position: absolute;
+    font-size: 22px;
+    top: 9px;
+    left: 10px;
+}
+
+.nav-tabs-vertical>li:not(.done)>a>i.fa-check-circle-o {
+    display: none;
+}
+
+.nav-tabs-vertical>li.done>a>i.fa-check-circle-o {
+    display: block;
+}
+
+
+/*****************  end-tabs-vertical **********************/
+
+
+/*****************  login button *********************/
+
+#login-buttons .login-link-text {
+    color: #fff;
+    text-decoration: none;
+}
+
+#login-buttons #login-name-link {
+    text-decoration: none;
+    /*padding: 15px 15px;*/
+    line-height: 20px;
+    position: relative;
+    display: block;
+}
+
+#login-buttons #login-dropdown-list {
+    right: 0px;
+    left: inherit;
+    top: 65px;
+    border-radius: 0px;
+}
+
+
+/***************** End : login button *********************/
+
+
+/***************** navbar *********************/
+
+.navbar {
+    background: #192231;
+    border: none;
+    -moz-box-shadow: inset 0 -10px 10px -10px #fff;
+    -webkit-box-shadow: inset 0 -10px 10px -10px #fff;
+    box-shadow: inset 0 -10px 10px -10px #fff;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #fff;
+    background: #494e68;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0px;
+    }
+}
+
+
+/***************** End : navbar *********************/
+
+
+/****************  spinner css ***********************/
+
+.sk-wave {
+    margin: 40px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.sk-wave .sk-rect {
+    background-color: #192231;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+    animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+}
+
+.sk-wave .sk-rect1 {
+    -webkit-animation-delay: -1.2s;
+    animation-delay: -1.2s;
+}
+
+.sk-wave .sk-rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.sk-wave .sk-rect3 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+.sk-wave .sk-rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.sk-wave .sk-rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-waveStretchDelay {
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+    20% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+@keyframes sk-waveStretchDelay {
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+    20% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+
+/*********************** end spinner ****************/
+
+.table>thead>tr>th {
+    background: #192231;
+    color: #fff;
+}
+
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+    line-height: 1;
+}
+
+#mapping .spinner {
+    margin: 15px 0px 0px 15px;
+}
+
+#mapping .progress-button {
+    margin-top: 20px;
+}
+
+#mapping .view-mapping {
+    height: 465px;
+    overflow-y: auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#preview .spinner {
+    margin: -5px 0px 0px 15px;
+    display: none;
+}
+
+
+/*****************************   step css ****************************/
+
+.step-progress .progress {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+    color: #849397;
+    background: #fff;
+    box-shadow: none;
+}
+
+.step-progress .progress>li {
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.step-progress .progress>li:before {
+    content: attr(data-step);
+    display: block;
+    margin: 0 auto;
+    background: #DFE3E4;
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    margin-bottom: 0.25em;
+    line-height: 3em;
+    border-radius: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+.step-progress .progress>li:after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: #DFE3E4;
+    width: 100%;
+    height: 0.5em;
+    top: 1.25em;
+    left: 38%;
+    margin-left: 1.5em\9;
+}
+
+.step-progress .progress>li:first-child:after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: #DFE3E4;
+    width: 100%;
+    height: 0.5em;
+    top: 1.25em;
+    left: 52%;
+    margin-left: 1.5em\9;
+}
+
+.step-progress .progress>li:last-child:after {
+    display: none;
+}
+
+.step-progress .progress>li.is-complete {
+    color: #1fb58f;
+}
+
+.step-progress .progress>li.is-complete:before,
+.step-progress .progress>li.is-complete:after {
+    color: #FFF;
+    background: #1fb58f;
+}
+
+.step-progress .progress>li.is-active {
+    color: #494e6b;
+}
+
+.step-progress .progress>li.is-active:before {
+    color: #FFF;
+    background: #494e6b;
+}
+
+.step-progress .product-tab-block {
+    position: relative;
+    margin: 30px 0;
+    overflow: auto;
+}
+
+.step-progress .product-tab-block .nav-tabs {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 220px;
+    border: 0;
+}
+
+.step-progress .product-tab-block .nav-tabs li {
+    float: none;
+    margin-bottom: 2px;
+}
+
+.step-progress .product-tab-block .nav-tabs li a {
+    border: 0;
+    background: #f9f9f9;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    color: #888;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    position: relative;
+    overflow: hidden;
+}
+
+.step-progress .product-tab-block .nav-tabs li.active a,
+.step-progress .product-tab-block .nav-tabs li a:hover {
+    border: 0;
+    background: #42a5f5;
+    color: #fff;
+}
+
+.step-progress .product-tab-block .nav-tabs li a:hover::before,
+.step-progress .product-tab-block .nav-tabs li.active a::before {
+    height: 2px;
+    background: #416486;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.step-progress .product-tab-block .nav-tabs li.done a {
+    background: #1fb58f;
+    color: #fff;
+}
+
+.step-progress .product-tab-block .nav-tabs li.done a::before {
+    height: 2px;
+    background: #1fb58f;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.step-progress .product-tab-block .tab-content {
+    width: 100%;
+    padding-left: 220px;
+}
+
+.step-progress .product-tab-block .tab-content .tab-pane {
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    padding: 30px;
+    min-height: 500px;
+    border-radius: 0 5px 5px 5px;
+}
+
+
+/***************************** end:  step css ******************************/
+
+#steps-block {
+    margin-bottom: 10px;
+}
+
+#handson-Zone-during-upload {
+    display: none;
+}
+
+#handson-Zone-during-upload>.handson-table {
+    width: 100%;
+    overflow-y: auto;
+    height: 200px;
+    margin-bottom: 5px;
+    overflow-x: hidden;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
+}
+
+.transform-function {
+    white-space: nowrap;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    float: left;
+    padding-right: 5px;
+}
+
+.remove-custom-javascript {
+    display: none;
+}
+
+.view-mapping table tr td.has-edit:hover .remove-custom-javascript {
+    display: block;
+}
+
+.panel-heading h3 {
+    margin: 0px;
+}
+
+.panel-heading .options {
+    float: right;
+}
+
+.panel-heading .options>a>i {
+    font-size: 30px;
+}
+
+.imageOrFileDiv {
+    display: flex;
+    width: 50%;
+    height: 41px;
+    margin: 10px;
+}
+
+.imageOrFileButton {
+    width: 30%;
+    background-color: #fff;
+    color: #494e6b;
+}
+
+.imageOrFileButton:focus {
+    background-color: #494e6b;
+    color: #fff;
+}
+
+.imageOrFileButton.active {
+    background-color: #494e6b !important;
+    color: #fff !important;
+}
+
+.dropzone {
+    /* min-height: 150px; */
+    border: 2px dashed rgb(73, 78, 107);
+    background: white;
+    padding: 20px 20px;
+    height: 198px !important;
+    overflow-y: auto !important;
+}
+
+.dz-message span .first {
+    color: gray !important;
+    font-size: 1.7em !important;
+}
+
+.dz-message span .second {
+    color: #b7b7b7 !important;
+    font-size: 1em !important;
+}
+
+#mapping.add-schema-show .newSchemaProperty {
+    display: table-cell;
+}
+
+#mapping .newSchemaProperty {
+    display: none;
+}
+
+
+/***************************  rfq-view ********************************/
+
+.rfq-view {
+    position: relative;
+}
+
+.rfq-view .nav {
+    border-right: 1px solid #ccc;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    height: calc(100vh - 50px);
+    background: rgba(221, 221, 221, 0.2);
+    width: 325px;
+}
+
+.rfq-view .nav li:first-child {
+    border-top: 1px solid #ccc;
+}
+
+.rfq-view .nav li {
+    border-bottom: 1px solid #ccc;
+    padding: 7px 7px 7px 30px;
+    cursor: pointer;
+}
+
+.rfq-view .nav li>i {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+
+.rfq-view .nav li.active {
+    background: #ccc;
+}
+
+.rfq-view .rfq-discussion {
+    margin-left: 340px;
+}
+
+.rfq-view .rfq-discussion .media {
+    padding: 0px 20px 0px 0px;
+}
+
+.rfq-view .rfq-discussion .media .media-body {
+    border: 1px solid #d1d5da;
+    position: relative;
+    overflow: visible;
+}
+
+.rfq-view .rfq-discussion .media .media-body .media-heading {
+    background: #f6f8fa;
+    padding: 8px;
+    font-size: 15px;
+    border-bottom: 1px solid #d1d5da;
+}
+
+.rfq-view .rfq-discussion .media .media-body>div {
+    padding: 10px;
+}
+
+.rfq-view .rfq-discussion .media .media-body::before,
+.rfq-view .rfq-discussion .media .media-body::after {
+    position: absolute;
+    top: 11px;
+    right: 100%;
+    left: -16px;
+    display: block;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    content: " ";
+    border-color: transparent;
+    border-style: solid solid outset;
+}
+
+.rfq-view .rfq-discussion .media .media-body::after {
+    margin-top: 1px;
+    margin-left: 2px;
+    border-width: 7px;
+    border-right-color: #f6f8fa;
+}
+
+.rfq-view .rfq-discussion .media .media-body::before {
+    border-width: 8px;
+    border-right-color: #d1d5da;
+}
+
+.rfq-view .rfq-discussion .reply-form {
+    padding: 20px 0px 20px 0px;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+
+/*
+.rfq-view .rfq-discussion .reply-form textarea {
+    float: left;
+    width: 88%;
+    height: 85px;
+}*/
+
+.rfq-view .rfq-discussion {
+    height: calc(100vh - 75px);
+    overflow-y: auto;
+}
+
+#tblPreview {
+    max-height: 43vh;
+    display: block;
+    overflow: auto;
+}
+
+#tblPreview thead {
+    display: table-header-group;
+}
+
+#tblPreview tbody {
+    display: table-row-group;
+}
+
+
+/*Nav Tabs*/
+
+.nav-tabs1 {
+    border-bottom: 2px solid #DDD;
+    margin-bottom: 15px;
+}
+
+.nav-tabs1>li.active>a,
+.nav-tabs1>li.active>a:focus,
+.nav-tabs1>li.active>a:hover {
+    border-width: 0;
+    background-color: #eee;
+}
+
+.nav-tabs1>li>a {
+    border: none;
+    color: #666;
+}
+
+.nav-tabs1>li.active>a,
+.nav-tabs1>li>a:hover {
+    border: none;
+    color: #4285F4 !important;
+    background: transparent;
+}
+
+.nav-tabs1>li>a::after {
+    content: "";
+    background: #4285F4;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all 250ms ease 0s;
+    transform: scale(0);
+}
+
+.nav-tabs1>li.active>a::after,
+.nav-tabs1>li:hover>a::after {
+    transform: scale(1);
+}
+
+.tab-nav>li>a::after {
+    background: #21527d none repeat scroll 0% 0%;
+    color: #fff;
+}
+
+
+/*****************************  dashboard css  **************************************/
+
+.bg-aqua {
+    background-color: #00c0ef !important;
+    color: #fff !important;
+}
+
+.small-box {
+    border-radius: 2px;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.small-box>.inner {
+    padding: 10px;
+}
+
+.small-box h3,
+.small-box p {
+    z-index: 5;
+}
+
+.small-box h3 {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+    padding: 0;
+}
+
+.small-box p {
+    font-size: 15px;
+}
+
+.small-box .icon {
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    z-index: 0;
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0.15);
+}
+
+.small-box>.small-box-footer {
+    position: relative;
+    text-align: center;
+    padding: 3px 0;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.bg-red {
+    background-color: #dd4b39 !important;
+    color: #fff !important;
+}
+
+.bg-yellow {
+    color: #fff !important;
+    background-color: #f39c12 !important;
+}
+
+.bg-green {
+    color: #fff !important;
+    background-color: #00a65a !important;
+}
+
+#dv {
+    margin: 2% 15%;
+}
+
+ul.mySection label {
+    width: 310px;
+}
+
+.makeBlur{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    opacity: 0.7;
+    display: none ;
+}
+
+.makeBlur i{
+   margin-top: 75px;
+}
+#preview .makeBlur{
+    width: calc(100% - 30px);
+}

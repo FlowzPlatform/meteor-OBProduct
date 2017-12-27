@@ -1,0 +1,74 @@
+2017-05-18T10:09:48.125450308 0.051405s notice: Recursively removing directory /var/www/html/node/OBProduct/rethinkdb_data/tmp
+2017-05-18T10:09:48.139309498 0.065264s notice: Initializing directory /var/www/html/node/OBProduct/rethinkdb_data
+2017-05-18T10:09:48.139584872 0.065538s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/var/www/html/node/OBProduct/rethinkdb_data' did not already exist or is empty.)
+2017-05-18T10:09:48.139814217 0.065768s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2017-05-18T10:09:48.147810312 0.073768s notice: Running on Linux 4.4.0-72-generic x86_64
+2017-05-18T10:09:48.147935598 0.073889s notice: Loading data from directory /var/www/html/node/OBProduct/rethinkdb_data
+2017-05-18T10:09:48.181222837 0.107176s info: Automatically using cache size of 3802 MB
+2017-05-18T10:09:48.182003307 0.107956s notice: Listening for intracluster connections on port 29015
+2017-05-18T10:09:48.186994472 0.112947s notice: Listening for client driver connections on port 28015
+2017-05-18T10:09:48.191380674 0.117334s error: Could not bind to http port: The address at localhost:8080 is reserved or already in use.
+2017-05-18T10:13:26.026408799 0.121515s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2017-05-18T10:13:26.034504267 0.129617s notice: Running on Linux 4.4.0-72-generic x86_64
+2017-05-18T10:13:26.034674451 0.129780s notice: Loading data from directory /var/www/html/node/OBProduct/rethinkdb_data
+2017-05-18T10:13:26.065832833 0.160938s info: Automatically using cache size of 3717 MB
+2017-05-18T10:13:26.066459403 0.161564s notice: Listening for intracluster connections on port 29015
+2017-05-18T10:13:26.067399049 0.162504s notice: Listening for client driver connections on port 28015
+2017-05-18T10:13:26.071426990 0.166532s error: Could not bind to http port: The address at localhost:8080 is reserved or already in use.
+2017-10-16T14:34:30.425499455 0.058650s notice: Recursively removing directory /home/software/Validation_Rules/OBProduct/rethinkdb_data/tmp
+2017-10-16T14:34:30.436156421 0.069308s notice: Running rethinkdb 2.3.5 (GCC 5.4.0)...
+2017-10-16T14:34:30.438361763 0.071513s notice: Running on Linux 4.4.0-93-generic x86_64
+2017-10-16T14:34:30.438409196 0.071558s notice: Loading data from directory /home/software/Validation_Rules/OBProduct/rethinkdb_data
+2017-10-16T14:34:30.479016707 0.112170s info: Automatically using cache size of 4631 MB
+2017-10-16T14:34:30.480315633 0.113466s notice: Listening for intracluster connections on port 29015
+2017-10-16T14:34:30.495133647 0.128283s notice: Listening for client driver connections on port 28015
+2017-10-16T14:34:30.513218105 0.146368s error: Could not bind to http port: The address at localhost:8080 is reserved or already in use.
+2017-10-16T14:34:47.353325238 0.038113s notice: Running rethinkdb 2.3.5 (GCC 5.4.0)...
+2017-10-16T14:34:47.355837134 0.040626s notice: Running on Linux 4.4.0-93-generic x86_64
+2017-10-16T14:34:47.355906327 0.040692s notice: Loading data from directory /home/software/Validation_Rules/OBProduct/rethinkdb_data
+2017-10-16T14:34:47.404922094 0.089715s info: Automatically using cache size of 4842 MB
+2017-10-16T14:34:47.407422364 0.092210s notice: Listening for intracluster connections on port 29015
+2017-10-16T14:34:47.411410456 0.096197s notice: Listening for client driver connections on port 28015
+2017-10-16T14:34:47.411845164 0.096632s notice: Listening for administrative HTTP connections on port 8080
+2017-10-16T14:34:47.411855241 0.096642s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-10-16T14:34:47.411868218 0.096654s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-10-16T14:34:47.411875902 0.096662s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-10-16T14:34:47.411886939 0.096673s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-10-16T14:34:47.411898471 0.096685s notice: Server ready, "oblap28_9xy" f170ee13-e607-4f57-a0d4-08a77c62bf94
+2017-10-16T14:34:48.833233738 1.518021s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-10-16T17:14:40.184021401 8188.118734s notice: Someone asked for the nonwhitelisted file "/assets/main.css".  If this should be accessible, add it to the static web assets.
+2017-10-16T17:14:40.184571635 8188.119284s notice: Someone asked for the nonwhitelisted file "/assets/CheckBox.css".  If this should be accessible, add it to the static web assets.
+2017-10-16T17:24:03.494162823 8751.428875s notice: Someone asked for the nonwhitelisted file "/assets/main.css".  If this should be accessible, add it to the static web assets.
+2017-10-16T17:24:03.494217805 8751.428930s notice: Someone asked for the nonwhitelisted file "/assets/CheckBox.css".  If this should be accessible, add it to the static web assets.
+2017-10-16T17:48:42.486265592 10229.536101s notice: Someone asked for the nonwhitelisted file "/assets/main.css".  If this should be accessible, add it to the static web assets.
+2017-10-16T17:48:42.486320213 10229.536156s notice: Someone asked for the nonwhitelisted file "/assets/CheckBox.css".  If this should be accessible, add it to the static web assets.
+2017-11-28T15:41:27.720750026 20.647496s notice: Running rethinkdb 2.3.5 (GCC 5.4.0)...
+2017-11-28T15:41:27.742681891 20.669428s notice: Running on Linux 4.4.0-97-generic x86_64
+2017-11-28T15:41:27.742864747 20.669605s notice: Loading data from directory /home/software/Validation_Rules/OBProduct/rethinkdb_data
+2017-11-28T15:41:27.866966898 20.793708s info: Automatically using cache size of 670 MB
+2017-11-28T15:41:27.867518868 20.794258s notice: Listening for intracluster connections on port 29015
+2017-11-28T15:41:27.877522458 20.804262s notice: Listening for client driver connections on port 28015
+2017-11-28T15:41:27.899554555 20.826294s error: Could not bind to http port: The address at localhost:8080 is reserved or already in use.
+2017-12-11T11:19:32.300448494 0.083454s notice: Running rethinkdb 2.3.5 (GCC 5.4.0)...
+2017-12-11T11:19:32.311409477 0.094416s notice: Running on Linux 4.4.0-97-generic x86_64
+2017-12-11T11:19:32.311508179 0.094510s notice: Loading data from directory /home/software/Validation_Rules/OBProduct/rethinkdb_data
+2017-12-11T11:19:32.371221174 0.154225s info: Automatically using cache size of 3373 MB
+2017-12-11T11:19:32.371813647 0.154815s notice: Listening for intracluster connections on port 29015
+2017-12-11T11:19:32.380771204 0.163773s notice: Listening for client driver connections on port 28015
+2017-12-11T11:19:32.380890860 0.163892s notice: Listening for administrative HTTP connections on port 8080
+2017-12-11T11:19:32.380893132 0.163895s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-12-11T11:19:32.380895802 0.163897s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-12-11T11:19:32.380897686 0.163899s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-12-11T11:19:32.380900144 0.163902s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-12-11T11:19:32.380902686 0.163904s notice: Server ready, "oblap28_9xy" f170ee13-e607-4f57-a0d4-08a77c62bf94
+2017-12-11T11:19:33.677106451 1.460109s notice: A newer version of the RethinkDB server is available: 2.3.6. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2017-12-11T11:19:36.446353350 4.229356s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2017-12-11T11:19:44.445149003 12.228152s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2017-12-11T11:19:56.444650633 24.227653s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2017-12-11T11:20:16.440357110 44.223359s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2017-12-11T11:20:52.443924839 80.226927s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2017-12-11T11:22:00.443534689 148.226537s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2017-12-11T11:24:12.442735432 280.225737s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2017-12-11T11:28:32.445054136 540.228057s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2017-12-11T11:37:08.446843871 1056.229846s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2017-12-11T11:54:17.072024065 2084.225501s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
